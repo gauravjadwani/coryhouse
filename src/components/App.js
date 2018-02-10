@@ -2,14 +2,16 @@
 import React, {PropTypes} from 'react';
 // import Header from './common/Header';
 // import {connect} from 'react-redux';
+import Header from './common/Header';
 
 class App extends React.Component {
   render() {
+    console.log(this.props.children);
     return (
       <div className="container-fluid">
-      <p>header here...</p>
-      {this.props.children}
-      </div>
+       <Header/>
+       {this.props.children}
+     </div>
     );
   }
 }
